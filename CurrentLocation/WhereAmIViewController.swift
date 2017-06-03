@@ -22,7 +22,7 @@ class WhereAmIViewController: UIViewController,MKMapViewDelegate,CLLocationManag
         // Do any additional setup after loading the view.
         manager = CLLocationManager()
         manager.delegate = self
-        manager.requestWhenInUseAuthorization()  //must add in info.plist
+        manager.requestWhenInUseAuthorization()
         manager.startUpdatingLocation()
     }
     
@@ -58,14 +58,17 @@ class WhereAmIViewController: UIViewController,MKMapViewDelegate,CLLocationManag
             else
             {
                 let p = CLPlacemark(placemark: (placemarks?[0] as CLPlacemark!))
-                
+                var subthoroughFare:String = ""
                 var thoroughFare:String = ""
                 var subLocality:String = ""
                 var subAdministrativeArea:String = ""
                 var postalCode:String = ""
                 var country:String = ""
                 
-                
+                if(p.subThoroughfare != nil)
+                {
+                    subthoroughFare = p.subThoroughfare!
+                }
                 if((p.thoroughfare) != nil)
                 {
                     thoroughFare = (p.thoroughfare)!
@@ -87,7 +90,7 @@ class WhereAmIViewController: UIViewController,MKMapViewDelegate,CLLocationManag
                     country = (p.country)!
                 }
                 
-                self.address.text = "\(thoroughFare)\n \(subLocality)\n \(subAdministrativeArea) \(postalCode)\n \(country)"
+                self.address.text = "\(subthoroughFare) \(thoroughFare)\n\(subLocality)\n\(subAdministrativeArea) \(postalCode)\n\(country)"
             }
         })
     }

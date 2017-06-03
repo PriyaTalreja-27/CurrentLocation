@@ -49,7 +49,7 @@
                                 </connections>
                             </mapView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kvl-mX-Yob">
-                                <rect key="frame" x="16" y="300" width="343" height="21"/>
+                                <rect key="frame" x="16" y="330" width="343" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="vWA-FI-sVp"/>
                                 </constraints>
@@ -57,9 +57,19 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address :-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4zQ-eY-lda">
+                                <rect key="frame" x="16" y="293" width="75.5" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="xXr-jc-hn5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="4zQ-eY-lda" firstAttribute="top" secondItem="eQA-Fi-wI1" secondAttribute="bottom" constant="8" id="0iO-8s-nL0"/>
                             <constraint firstAttribute="trailing" secondItem="eQA-Fi-wI1" secondAttribute="trailing" id="2Hd-Am-1K6"/>
                             <constraint firstAttribute="trailing" secondItem="7TX-O0-6ob" secondAttribute="trailing" id="4LX-31-UQ3"/>
                             <constraint firstItem="eQA-Fi-wI1" firstAttribute="top" secondItem="7TX-O0-6ob" secondAttribute="bottom" id="7xP-zi-R76"/>
@@ -67,9 +77,10 @@
                             <constraint firstItem="eQA-Fi-wI1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Fob-dK-1rx"/>
                             <constraint firstItem="7TX-O0-6ob" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="LdE-bR-d0n"/>
                             <constraint firstItem="eQA-Fi-wI1" firstAttribute="top" secondItem="7TX-O0-6ob" secondAttribute="bottom" id="Mdd-ah-acf"/>
-                            <constraint firstItem="kvl-mX-Yob" firstAttribute="top" secondItem="eQA-Fi-wI1" secondAttribute="bottom" constant="15" id="NUM-ER-Bbd"/>
+                            <constraint firstItem="kvl-mX-Yob" firstAttribute="top" secondItem="4zQ-eY-lda" secondAttribute="bottom" constant="16" id="Our-vD-Sfq"/>
                             <constraint firstItem="7TX-O0-6ob" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Uw4-So-qRb"/>
                             <constraint firstItem="kvl-mX-Yob" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="eab-dn-wLX"/>
+                            <constraint firstItem="4zQ-eY-lda" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="htP-fQ-p0D"/>
                         </constraints>
                     </view>
                     <connections>
@@ -79,7 +90,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137" y="59"/>
+            <point key="canvasLocation" x="136.80000000000001" y="58.920539730134934"/>
         </scene>
     </scenes>
 </document>
